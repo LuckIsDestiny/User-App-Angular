@@ -15,7 +15,10 @@ export class CreateUserComponent {
   username = '';
   password = '';
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(
+    private userService: UserService, 
+    private router: Router
+  ) { }
 
   createUser() {
     if (this.username && this.password) {
