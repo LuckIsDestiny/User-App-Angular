@@ -1,0 +1,22 @@
+<h2>User List</h2>
+<a [routerLink]="['/create']" routerLinkActive="active">Create New User</a>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user._id }}</td>
+      <td>{{ user.username }}</td>
+      <td>
+        <button (click)="editUser(user._id)">Edit</button>
+        <button (click)="deleteUser(user._id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
